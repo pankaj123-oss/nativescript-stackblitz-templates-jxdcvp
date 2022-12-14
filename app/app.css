@@ -5,6 +5,36 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
 Button.-primary {
   font-size: 18;
+}
+.fon {
+  height: 300px;
+}
+.font {
+  font-size: 40px;
+  text-align: center;
+}
+Label {
+  font-size: 20px;
+}
+TextField {
+  border-width: 2px;
+  border-color: black;
+  margin-top: 100px;
+  padding: 5px;
+  font-size: 20px;
+}
+button {
+  background-color: tomato;
+  margin-top: 50px;
+}
+.Sign {
+  margin-left: 750px;
+}
+.for {
+  margin-left: 30px;
 }

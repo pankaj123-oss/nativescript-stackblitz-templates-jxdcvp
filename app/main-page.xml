@@ -1,14 +1,20 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
     <ActionBar title="My App" icon="" />
     <StackLayout class="p-4">
-      <GridLayout rows="auto,auto,auto" column="auto,*">
+      <StackLayout>
+        <Image src="https://aniportalimages.s3.amazonaws.com/media/details/NMIMS_5687_mYlRIr6.jpg"/>
+      </StackLayout>
+      <StackLayout class="fon">
+        <Label class="font" text="Student Login"/>
+      </StackLayout>
+      <GridLayout rows="auto,auto,auto,auto" column="auto,*" class="form">
       <Label text="Name" col="0" row="0"/>
       <TextField text="{{name}}" row="0" col="1"/>
       <Label text="Password" row="1" col="0"/>
       <TextField text="{{pass}}" row="1" col="1"/>
-      <Buttton text="Login" row="2" colspan="2"/>
-      <TextField text="Forgot Password!!" row="3" col="0"/>
-      <TextField text="Sign In" row="3" col="2"/>
+      <Button text="Login" tap="onTap" row="2" colspan="2"/>
+      <Label text="Forgot Password!!" row="3" col="0" class="for"/>
+      <Label text="Sign In" row="3" col="2" class="Sign"/>
       </GridLayout>
     </StackLayout>
 </Page>
