@@ -1,7 +1,8 @@
-import { createViewModel } from './main-view-model';
+import { Observable } from '@nativescript/core';
 
 export function onTap(args) {
-  const button = args.object;
-  const page = button.page;
-  page.bindingContext = createViewModel();
+  const mv = new Observable();
+  const page = args.object;
+  var name = mv.get('name');
+  console.log(name);
 }
