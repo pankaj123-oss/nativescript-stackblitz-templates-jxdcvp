@@ -1,11 +1,11 @@
 import { createModel } from './main-view-model';
 import { Observable } from '@nativescript/core';
+var abc = createModel()
 export function LoadedTo(args) {
   const page = args.object;
-  page.bindingContext = onTap();
+  page.bindingContext = abc;
 }
-export function onTap() {
-  const vm = new Observable();
-  var name = vm.get('name');
+export function onTap(args) {
+  var name = abc.get('name');
   console.log(name);
 }
