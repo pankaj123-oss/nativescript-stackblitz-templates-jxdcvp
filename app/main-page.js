@@ -1,8 +1,5 @@
-import { Observable } from '@nativescript/core';
-
-export function onTap(args) {
-  const mv = new Observable();
+import { createModel } from './main-view-model';
+export function LoadedTo(args) {
   const page = args.object;
-  var name = mv.get('name');
-  console.log(name);
+  page.bindingContext = createModel();
 }
