@@ -1,16 +1,19 @@
 import { createModel } from './main-view-model';
 var abc = createModel();
-var usernametest = 'pankaj';
+var usernametest = 'Pankaj';
 var userpasstest = '123';
 export function loadedTo(args) {
   const page = args.object;
   page.bindingContext = abc;
 }
 export function onTap(args) {
+  const button = args.object;
+  const page = button.page;
   var name = abc.get('name');
   var pass = abc.get('pass');
   if (name == usernametest && pass == userpasstest) {
-    alert('Name =' + name + '\n Password = ' + pass);
+    console.log('Name =' + name + '\n Password = ' + pass);
+    page.frame.navigate('home');
   } else if (
     (name == undefined && pass == undefined) ||
     (name == null && pass == null)
