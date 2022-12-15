@@ -11,7 +11,7 @@
       <Label text="Name" col="0" row="0"/>
       <TextField text="{{name}}" row="0" col="1"/>
       <Label text="Password" row="1" col="0"/>
-      <TextField text="{{pass}}" row="1" col="1"/>
+      <TextField text="{{pass}}" secure="true" row="1" col="1"/>
       <Button text="Login" tap="onTap" row="2" colspan="2"/>
       <Label text="Forgot Password!!" row="3" col="0" class="for"/>
       <Label text="Sign In" row="3" col="2" class="Sign"/>

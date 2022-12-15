@@ -1,8 +1,7 @@
 import { createModel } from './main-view-model';
-import { Observable } from '@nativescript/core';
 var abc = createModel();
 var usernametest = 'pankaj';
-
+var userpasstest = '123';
 export function loadedTo(args) {
   const page = args.object;
   page.bindingContext = abc;
@@ -10,6 +9,22 @@ export function loadedTo(args) {
 export function onTap(args) {
   var name = abc.get('name');
   var pass = abc.get('pass');
-  console.log(name);
-  console.log(pass);
+  if (name == usernametest && pass == userpasstest) {
+    alert('Name =' + name + '\n Password = ' + pass);
+  } else if (
+    (name == undefined && pass == undefined) ||
+    (name == null && pass == null)
+  ) {
+    alert('Name and Password are empty');
+  } else if (
+    (usernametest !== name && userpasstest !== pass) ||
+    name != usernametest ||
+    pass != userpasstest
+  ) {
+    alert('Invalid username and password!!!');
+  } else if (name == undefined) {
+    alert('Name must be filled out');
+  } else if (pass == undefined) {
+    alert('Password must be filled out');
+  }
 }
